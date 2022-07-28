@@ -8,15 +8,9 @@ import { Cat } from 'src/app/shared/models/cat.model';
 })
 export class ItemCardComponent implements OnInit {
   @Input('cat') cat!: Cat;
-  @Output() showMoreClickedFlag = new EventEmitter<number>()
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  showMoreClicked(): void {
-    console.log(this.cat.id)
-    this.showMoreClickedFlag.emit(this.cat.id);
-  } 
 }

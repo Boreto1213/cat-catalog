@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Cat } from 'src/app/shared/models/cat.model';
+import { CatService } from 'src/app/shared/services/cat.service';
 
 @Component({
   selector: 'app-details-pop-up',
@@ -7,11 +9,12 @@ import { Cat } from 'src/app/shared/models/cat.model';
   styleUrls: ['./details-pop-up.component.scss']
 })
 export class DetailsPopUpComponent implements OnInit {
-  @Input('cat') cat!: Cat;
-  // cat: Cat = new Cat(1, "Richy", 'twelve', 'British', 'Male', 'Grey', 2300, '../../assets/images/images.jpeg');
-  constructor() { }
+  cat!: Cat;
+  constructor(private route: ActivatedRoute, private catService: CatService) { }
 
   ngOnInit(): void {
+    const id = this.route.snapshot.params['id'];
+    this.cat = this.catService.getCatById(id);
   }
 
 }

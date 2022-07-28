@@ -17,11 +17,6 @@
         background-position: center;
     }
 
-    // img {
-    //     width: 300px;
-    //     height: 200px;
-    // }
-
     .info {
         padding: 0;
 
@@ -39,13 +34,16 @@
     }
 
     .show-more-btn {
+        line-height: 40px;
+        text-decoration: none;
+        text-align: center;
         border: none;
         border-radius: 6px;
         height: 40px;
         width: 100px;
         color: white;
         background-color: #08302F;
-        font-size: 12px;
+        font-size: 14px;
         transition: all 0.3s ease 0s;
         cursor: pointer;
 

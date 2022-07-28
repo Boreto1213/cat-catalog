@@ -25,22 +25,4 @@ export class CatCatalogComponent implements OnInit {
     console.log(this.cats)
   }
 
-  onShowMoreClicked(id: number): void {
-    console.error(id)
-    this.selectedCat = this.cats.find(cat => cat.id == id) as Cat;
-
-    this.showMoreClickedFlag = true;
-
-  }
-
-  // showMoreClicked(id: number = 0): void {
-  //   if (id == 0) {
-  //     this.showMoreClickedFlag = false;
-  //   } else {
-  //     this.selectedCat = this.cats.find(cat => cat.id == id) as Cat;
-  //     console.log(this.selectedCat);
-
-  //     this.showMoreClickedFlag = true;
-  //   }
-  // }
 }
