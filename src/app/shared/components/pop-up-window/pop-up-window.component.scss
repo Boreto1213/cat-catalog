@@ -1,0 +1,40 @@
+app-pop-up-window {
+    display: none;
+}
+
+.pop-up-background {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    background-color: black;
+    opacity: 75%;
+
+    z-index: 900;
+}
+
+.pop-up-modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    z-index: 1000;
+
+    /* enables scrolling for longer modals */
+    overflow: auto;
+}
+
+.pop-up-body {
+    padding: 20px;
+    margin: 40px;
+    background-color: #eee;
+}
+
+/* disables scrolling of the page | it is added only when pop up is open*/
+body.pop-up-modal-open {
+    overflow: hidden;
+}

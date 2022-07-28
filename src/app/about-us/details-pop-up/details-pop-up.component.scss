@@ -1,0 +1,116 @@
+// :host {
+//     display: none;
+// }
+
+.pop-up {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+
+    // overflow: hidden;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1000;
+
+    /* enables scrolling for longer modals */
+    overflow: auto;
+
+    .pop-up-body {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+
+        height: 50%;
+        width: 50%;
+        padding: 30px;
+
+        margin: 180px;
+        background-color: #eee;
+
+        .image {
+            width: 50%;
+            height: 80%;
+            // margin: 20px;
+
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        .information {
+            font-size: 22px;
+
+            li {
+                margin: 10px;
+            }
+
+            .buttons {
+                
+
+                button {
+                    margin: 6px;
+                    border: none;
+                    font-size: 16px;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    height: 40px;
+
+                }
+
+                .buy-now {
+                    background-color: green;
+                    color: white;
+                    width: 100px;
+                    transition: all 0.3s ease 0s;
+
+                    &:hover {
+                        background-color: #B5E582;
+                        color: darkgreen;
+                    }
+
+                    &:active {
+                        background-color: #9cc76e;
+                    }
+                }
+
+                .ask-question {
+                    width: 140px;
+                    color: white;
+                    background-color: rgb(120, 36, 255);
+
+                    &:hover {
+                        background-color: #c7a9d6;
+                        color: darkmagenta;
+                    }
+
+                    &:active {
+                        background-color: #8e56aa;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pop-up-background {
+    position: fixed;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: black;
+    opacity: 75%;
+
+    z-index: 900;
+}
+
+/* disables scrolling of the page | it is added only when pop up is open*/
+body.pop-up-modal-open {
+    overflow: hidden;
+}

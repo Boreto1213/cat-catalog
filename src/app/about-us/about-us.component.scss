@@ -1,0 +1,113 @@
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+    padding-top: 150px;
+    align-items: center;
+    margin: 0;
+
+
+    .information {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        .header {
+            height: 60px;
+            width: 90%;
+            line-height: 60px;
+            background-color: darkgray;
+            font-size: 35px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .content {
+            display: flex;
+            width: 90%;
+            background-color: rgb(234, 231, 231);
+            justify-content: space-evenly;
+            border-radius: 0 0 8px 8px;
+
+            .image {
+                width: 400px;
+                height: 400px;
+                margin: 20px;
+                background-image: url('../../assets/images/about-us.jpeg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            .info {
+                margin-top: 16%;
+                font-size: 18px;
+                width: 40%;
+            }
+        }
+    }
+
+    .block {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+
+        .reviews {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 35%;
+            margin-bottom: 20px;
+    
+            .header {
+                height: 60px;
+                width: 100%;
+                line-height: 60px;
+                background-color: darkgray;
+                font-size: 35px;
+                text-align: center;
+                border-radius: 8px 8px 0 0;
+            }
+    
+            .container {
+                display: flex;
+                align-items: center;
+                background-color: rgb(234, 231, 231);
+                width: 100%;
+                justify-content: center;
+    
+                .all-reviews {
+                    display: flex;
+                    flex-direction: column;
+                    // gap: 12px
+                }
+    
+            
+            }
+        }
+
+        .add-review {
+            width: 40%;
+
+            .header {
+                height: 60px;
+                width: 100%;
+                line-height: 60px;
+                background-color: darkgray;
+                font-size: 35px;
+                text-align: center;
+                border-radius: 8px 8px 0 0;
+            }
+
+            form {
+                background-color: rgb(234, 231, 231);
+                // margin: 10px;
+                padding: 10px;
+            }
+        }
+    }
+}

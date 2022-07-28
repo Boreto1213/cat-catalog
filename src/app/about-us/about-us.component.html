@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <div class="information">
+        <div class="header">Information</div>
+        <div class="content">
+            <div class="image"></div>
+            <div class="info">We are a group of enthousiasts that share the same passion for cats. Our goal is to share that passion with people from all over the world!</div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="reviews">
+            <div class="header">Reviews</div>
+            <div class="container">
+                <div class="all-reviews">
+                    <app-review *ngFor="let review of reviews"></app-review>
+                </div>
+            </div>
+        </div>
+
+        <div class="add-review">
+            <div class="header">Add a Review</div>
+            
+            <form>
+                <label for="name">Your name:</label><br>
+                <input type="text" name="name" id="name">
+
+                <br>
+                <br>
+
+                <label for="text">Your review:</label><br>
+                <textarea name="text" id="text" cols="60" rows="5"></textarea>
+
+                <br>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+

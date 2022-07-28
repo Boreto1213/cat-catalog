@@ -1,0 +1,25 @@
+<h1>Testing pop up, background crap!</h1>
+
+<div class="pop-up">
+    <div class="pop-up-body">
+        <div class="image" [ngStyle]="{'background-image': 'url('+cat.img+')'}"></div>
+
+        <div class="information">
+            <ul>
+                <li><span>Name: </span> {{ cat.name }}</li>
+                <li><span>Age: </span> {{ cat.age }}</li>
+                <li><span>Breed: </span> {{ cat.breed }}</li>
+                <li><span>Color: </span> {{ cat.color }}</li>
+                <li><span>Sex: </span> {{ cat.sex }}</li>
+                <li><span>Price: </span> {{ cat.price }}</li>
+            </ul>
+
+            <div class="buttons">
+                <button class="buy-now">Buy Now</button>
+                <button class="ask-question">Ask a question</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pop-up-background"></div>
