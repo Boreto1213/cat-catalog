@@ -31,6 +31,13 @@
         margin: 180px;
         background-color: #eee;
 
+        .close-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 25%;
+            right: 25%;
+        }
+
         .image {
             width: 50%;
             height: 80%;

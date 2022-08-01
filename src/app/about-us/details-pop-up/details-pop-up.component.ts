@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Cat } from 'src/app/shared/models/cat.model';
 import { CatService } from 'src/app/shared/services/cat.service';
 
@@ -10,11 +10,14 @@ import { CatService } from 'src/app/shared/services/cat.service';
 })
 export class DetailsPopUpComponent implements OnInit {
   cat!: Cat;
-  constructor(private route: ActivatedRoute, private catService: CatService) { }
+  constructor(private route: ActivatedRoute, private catService: CatService, private router: Router) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id'];
     this.cat = this.catService.getCatById(id);
   }
 
+  goBackToCatalog(): void {
+    this.router.navigate(['/catalog']);
+  }
 }

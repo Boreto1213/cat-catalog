@@ -23,7 +23,7 @@ export class CatService {
     }
 
     getCats(): Cat[] {
-        return this.cats;
+        return this.cats.slice();
     }
 
     getCatById(id: number): Cat {

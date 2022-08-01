@@ -22,6 +22,9 @@ import {MatCardModule} from '@angular/material/card';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { DetailsPopUpComponent } from './about-us/details-pop-up/details-pop-up.component';
 
+import { MatIconModule } from '@angular/material/icon';
+import { ContactUsPopUpComponent } from './contact-us-pop-up/contact-us-pop-up.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +34,8 @@ import { DetailsPopUpComponent } from './about-us/details-pop-up/details-pop-up.
     ItemCardComponent,
     AboutUsComponent,
     ReviewComponent,
-    DetailsPopUpComponent
+    DetailsPopUpComponent,
+    ContactUsPopUpComponent
   ],
   imports: [
     BrowserModule,
@@ -41,8 +45,8 @@ import { DetailsPopUpComponent } from './about-us/details-pop-up/details-pop-up.
     FormsModule,
     NoopAnimationsModule,
     MatFormFieldModule,
-    MatCardModule
-    
+    MatCardModule,
+    MatIconModule
   ],
   providers: [CatService],
   bootstrap: [AppComponent]

@@ -1,0 +1,89 @@
+.pop-up {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 2000;
+
+    /* enables scrolling for longer modals */
+    overflow: auto;
+
+    .pop-up-body {
+        margin: 50px;
+        background-color: white;
+        width: 50%;
+        height: 65%;
+        color: black;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+
+            h1 {
+                margin-left: 20px;
+            }
+
+            .close-btn {
+                margin: 8px;
+                cursor: pointer;
+            }
+        }
+
+        ul {
+            margin: 30px;
+
+           li {
+            height: 90px;
+
+            .row {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+
+                .fb {
+                    display: inline-block;
+                    background-image: url('../../assets/icons/facebook.png');
+                    width: 24px;
+                    height: 24px;
+                
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+           }
+           }
+            
+            .info {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.pop-up-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: black;
+    opacity: 75%;
+
+    z-index: 900;
+}
+
+
+
+.message-container {
+    display: flex;
+    justify-content: center;
+    .message {
+        color: grey;
+    }
+}
+

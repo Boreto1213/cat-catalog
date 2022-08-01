@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Cat } from '../shared/models/cat.model';
 import { CatService } from '../shared/services/cat.service';
 
@@ -13,7 +14,7 @@ export class CatCatalogComponent implements OnInit {
   showMoreClickedFlag = false;
   selectedCat!: Cat;
 
-  constructor(private catService: CatService) { }
+  constructor(private catService: CatService, public route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.catService.fetchCats();
