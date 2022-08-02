@@ -3,60 +3,89 @@ body {
     overflow-y: hidden;
 }
 
-.wrapper {
+.background-image {
     width: 100%;
     height: 100vh;
-    padding: 0 5%;
+    // padding: 0 5%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    .background-video {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        z-index: -100;
-        // width: 100%;
-        // height: 100%;
-    }
-    
-    
-        margin-top: 50px;
-    
-        .content {
-            text-align: center;
-        
-            h3 {
-                font-weight: 600;
-                color: #b36bd6;
-                font-size: 50px;
-                transition: 0.5s;
 
-                &:hover {
-                    -webkit-text-stroke: 2px #eee;
-                    color: transparent;
-                }
-            }
-        
-            a {
-                text-decoration: none;
-                display: inline-block;
-                color: #eee;
-                font-size: 24px;
-                border: 4px solid white;
-                border-radius: 40px;
-                padding:14px 25px;
-                cursor: pointer;
-    
-                &:active {
-                    color: #08302F;
-                    border-color: #08302F;
-                }
+    background-image: url('../../assets/home-background/2866735.jpg');
+    background-position: center;
+    // background-repeat: no-repeat;
+    background-size: contain;
 
-                &:hover {
-                    background-color: #08302F;
-                }
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        .left-content {
+            margin-left: 20px;
+            h1 {
+                width: 40%;
+                color: white;
             }
         }
+
+        .right-content {
+            display: flex;
+            flex-direction: row-reverse;
+            
+            h1 {
+                margin-right: 20px;
+                width: 40%;
+                color: white;
+                text-align: right;
+            }
+        }
+
+        
+    }
     
+    // .background-video {
+    //     position: absolute;
+    //     right: 0;
+    //     bottom: 0;
+    //     z-index: -100;
+    // }
+    
+    
+    //     margin-top: 50px;
+    
+    //     .content {
+    //         text-align: center;
+        
+    //         h3 {
+    //             font-weight: 600;
+    //             color: #b36bd6;
+    //             font-size: 50px;
+    //             transition: 0.5s;
+
+    //             &:hover {
+    //                 -webkit-text-stroke: 2px #eee;
+    //                 color: transparent;
+    //             }
+    //         }
+        
+    //         a {
+    //             text-decoration: none;
+    //             display: inline-block;
+    //             color: #eee;
+    //             font-size: 24px;
+    //             border: 4px solid white;
+    //             border-radius: 40px;
+    //             padding:14px 25px;
+    //             cursor: pointer;
+    
+    //             &:active {
+    //                 color: #08302F;
+    //                 border-color: #08302F;
+    //             }
+
+    //             &:hover {
+    //                 background-color: #08302F;
+    //             }
+    //         }
+    //     }
 }
