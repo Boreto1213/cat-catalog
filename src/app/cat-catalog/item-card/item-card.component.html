@@ -1,6 +1,7 @@
 <div class="container">
-    <!-- <img src="https://w1.pngwing.com/pngs/58/647/png-transparent-kitten-russian-blue-scottish-fold-british-shorthair-cat-play-and-toys-black-cat-baby-cats-cattery.png" alt="Pic not working"> -->
-    <div class="image" [ngStyle]="{'background-image': 'url('+cat.img+')'}"></div>
+    <div class="left-arrow"></div>
+    <div #image class="image" [ngStyle]="{'background-image': 'url('+cat.img[0]+')'}" (mouseover)="onHover()" (mouseleave)="onLeave()"></div>
+
     <div class="info">
         <h1 class="name">{{ cat.name }}</h1>
         <h3 class="age">{{ cat.age }} old</h3>

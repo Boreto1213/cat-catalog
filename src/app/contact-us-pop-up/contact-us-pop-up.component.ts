@@ -1,6 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { EventEmitter } from '@angular/core';
+import { ContactUsService } from '../shared/services/contact-us-pop-up.service';
 
 @Component({
   selector: 'app-contact-us-pop-up',
@@ -10,12 +11,12 @@ import { EventEmitter } from '@angular/core';
 export class ContactUsPopUpComponent implements OnInit {
   @Output() closeModal = new EventEmitter();
 
-  constructor(private router: Router) { }
+  constructor(private contactUsService: ContactUsService) { }
 
   ngOnInit(): void {
   }
 
   close(): void {
-    this.closeModal.emit(true);
+    this.contactUsService.openCloseService.next(false);
   }
 }

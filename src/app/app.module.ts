@@ -25,6 +25,9 @@ import { DetailsPopUpComponent } from './about-us/details-pop-up/details-pop-up.
 import { MatIconModule } from '@angular/material/icon';
 import { ContactUsPopUpComponent } from './contact-us-pop-up/contact-us-pop-up.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactUsService } from './shared/services/contact-us-pop-up.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,9 +49,10 @@ import { ContactUsPopUpComponent } from './contact-us-pop-up/contact-us-pop-up.c
     NoopAnimationsModule,
     MatFormFieldModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    BrowserAnimationsModule
   ],
-  providers: [CatService],
+  providers: [CatService, ContactUsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

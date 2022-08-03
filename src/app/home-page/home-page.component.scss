@@ -20,22 +20,94 @@ body {
         display: flex;
         justify-content: space-between;
 
-        .left-content {
-            margin-left: 20px;
-            h1 {
-                width: 40%;
-                color: white;
+        .animated-btn {
+            display: inline-block;
+            padding: .75rem 1.25rem;
+            border-radius: 10rem;
+            color: #101820FF;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: .15rem;
+            transition: all .3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            cursor: pointer;
+            &:after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: #F2AA4CFF;
+              border-radius: 10rem;
+              z-index: -2;
+            }
+            &:before {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 0%;
+              height: 100%;
+              background-color: darken(#F2AA4CFF, 15%);
+              transition: all .3s;
+              border-radius: 10rem;
+              z-index: -1;
+            }
+            &:hover {
+              color: #fff;
+              &:before {
+                width: 100%;
+              }
+            }
+
+            .container {
+                padding-top: 50px;
+                margin: 0 auto;
+                width: 100%;
+                text-align: center;
+              }
+              h1 {
+                text-transform: uppercase;
+                font-size: .8rem;
+                margin-bottom: 2rem;
+                color: #777;
+              }
+              span {
+                display: block;
+                margin-top: 2rem;
+                font-size: .7rem;
+                color: #777;
+                a {
+                  font-size: .7rem;
+                  color: #999;
+                  text-decoration: underline;
+                }
             }
         }
 
+        .left-content {
+            margin-left: 80px;
+            h1 {
+                width: 40%;
+                color: rgb(244, 209, 163);
+            }
+            
+        }
+
         .right-content {
-            display: flex;
-            flex-direction: row-reverse;
+            margin-right: 80px;
+            
+            .float-right {
+                display: flex;
+                flex-direction: row-reverse;
+            }
             
             h1 {
-                margin-right: 20px;
                 width: 40%;
-                color: white;
+                color: rgb(244, 209, 163);
                 text-align: right;
             }
         }
@@ -63,8 +135,8 @@ body {
     //             transition: 0.5s;
 
     //             &:hover {
-    //                 -webkit-text-stroke: 2px #eee;
-    //                 color: transparent;
+                    // -webkit-text-stroke: 2px #eee;
+                    // color: transparent;
     //             }
     //         }
         
