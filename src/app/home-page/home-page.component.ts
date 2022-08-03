@@ -11,7 +11,6 @@ export class HomePageComponent implements OnInit {
   constructor(private router: Router, public route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    console.log(this.route)
   }
 
   toCatalog(): void {

@@ -1,16 +1,17 @@
 <header>
-    <span class="logo">GEORGE INC.</span>
+    <div class="logo"></div>
   
     <ul class="nav-list">
         <li class="links"><a routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">Home page</a></li>
         <li class="links"><a routerLink="catalog" routerLinkActive="active" ariaCurrentWhenActive="page">Cats catalog</a></li>
         <li class="links"><a routerLink="about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About us</a></li>
-        <li class="contact-us"><a (click)="showContactUs = true">Contact us</a></li>
-        <!-- <li class="contact-us"><a (click)="showContactInfo()">Contact us</a></li> -->
+        <!-- <li class="contact-us"><a (click)="showContactUs = true">Contact us</a></li> -->
+        <li class="contact-us"><a (click)="showContactUsFunc()">Contact us</a></li>
+
+
 
     </ul>
 </header>
 
-<app-contact-us-pop-up (closeModal)="showContactUs = false" *ngIf="showContactUs"></app-contact-us-pop-up>
+<app-contact-us-pop-up *ngIf="showContactUs"></app-contact-us-pop-up>
 
-<!-- routerLink="/first-component" routerLinkActive="active" ariaCurrentWhenActive="page" -->

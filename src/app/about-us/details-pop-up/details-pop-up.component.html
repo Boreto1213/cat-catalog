@@ -1,9 +1,12 @@
-<h1>Testing pop up, background crap!</h1>
-
 <div class="pop-up">
     <div class="pop-up-body">
         <mat-icon class="close-btn" (click)="goBackToCatalog()">close</mat-icon>
-        <div class="image" [ngStyle]="{'background-image': 'url('+cat.img+')'}"></div>
+
+        <mat-icon class="arrow" (click)="changePhoto(false)">chevron_left</mat-icon>
+        <!-- <div class="image" [@leftRightFade]="photoAnimationState" [ngStyle]="{'background-image': 'url('+cat.img[photoIndx]+')'}"></div> -->
+        <div class="image" [ngStyle]="{'background-image': 'url('+cat.img[photoIndx]+')'}"></div>
+
+        <mat-icon class="arrow" (click)="changePhoto(true)">chevron_right</mat-icon>
 
         <div class="information">
             <ul>
@@ -16,8 +19,8 @@
             </ul>
 
             <div class="buttons">
-                <button class="buy-now">Buy Now</button>
-                <button class="ask-question">Ask a question</button>
+                <!-- <button class="buy-now">Buy Now</button> -->
+                <button class="contact-us" (click)="goToContactUs()">Contact us</button>
             </div>
         </div>
     </div>

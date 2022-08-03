@@ -16,7 +16,8 @@ header {
     padding: 10px 10%;
     justify-content: flex-end;
     align-items: center;
-    background-color: #08302F;
+    // background-color: #08302F;
+    background-color: #101820FF;
     left: 0;
     right: 0;
     top: 0;
@@ -25,7 +26,17 @@ header {
 
     .logo {
         margin-right: auto;
-        cursor: default;
+        // cursor: default;
+        // color: #F2AA4CFF;
+        width: 50px;
+        height: 50px;
+        
+        background-image: url('../../../../assets/logo/cat.png');
+        // background-image: url('../../../../assets/logo/kitty.png');
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 
     .nav-list {
@@ -43,34 +54,41 @@ header {
                 display: block;
                 padding: 0 20px;
                 text-decoration: none;
+                color: #F2AA4CFF;
+
             }
 
             &.links:hover {
-                background-color: #B5E582;
+                background-color: #F2AA4CFF;
                 transform: scale(1.1);
 
                 a {
-                    color: black;
+                    // color: #101820FF;
+                    color: #eee;
                 }
             }
 
             &.links:active {
-                background-color: #4cbe5b;
+                background-color: rgb(192, 124, 36);
 
             }
 
             &.contact-us {
                 border-radius: 30px;
-                background-color: #b36bd6;
+                background-color:#F2AA4CFF;
                 text-align: center;
                 width: 130px;
 
-                &:hover {
-                    background-color: rgb(157, 85, 224);
+                a {
+                    color: #101820FF;
                 }
 
+                // &:hover {
+                //     background-color: rgb(157, 85, 224);
+                // }
+
                 &:active {
-                    background-color: rgb(120, 36, 255);
+                    background-color: rgb(192, 124, 36);
                 }
             }
 

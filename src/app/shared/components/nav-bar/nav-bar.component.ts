@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
+import { ContactUsService } from '../../services/contact-us-pop-up.service';
 
 
 @Component({
@@ -10,12 +11,17 @@ import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 export class NavBarComponent implements OnInit {
   showContactUs = false;
 
-  constructor(public route: ActivatedRoute, private router: Router) { }
+  constructor(private router: Router, private contactUsService: ContactUsService) { }
 
   ngOnInit(): void {
+    this.contactUsService.openCloseService.subscribe(
+      (flag: boolean) => {
+        this.showContactUs = flag;
+      }
+    ) 
   }
 
-  showContactInfo(): void {
-    this.router.navigate(['contact-us'], {relativeTo: this.route})
+  showContactUsFunc(): void {
+    this.contactUsService.openCloseService.next(true);
   }
 }
