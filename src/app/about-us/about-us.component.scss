@@ -1,113 +1,74 @@
-
-.wrapper {
+.container {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    width: 100%;
-    padding-top: 150px;
-    align-items: center;
-    margin: 0;
-
+    gap: 120px;
+    margin-top: 110px;
+    margin-left: 40px;
 
     .information {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-
-        .header {
-            height: 60px;
-            width: 90%;
-            line-height: 60px;
-            background-color: darkgray;
-            font-size: 35px;
-            text-align: center;
-            border-radius: 8px 8px 0 0;
+        h1 {
+            // margin-left: 40px;
         }
-
-        .content {
-            display: flex;
-            width: 90%;
-            background-color: rgb(234, 231, 231);
-            justify-content: space-evenly;
-            border-radius: 0 0 8px 8px;
-
-            .image {
-                width: 400px;
-                height: 400px;
-                margin: 20px;
-                background-image: url('../../assets/images/about-us.jpeg');
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: contain;
-            }
-
-            .info {
-                margin-top: 16%;
-                font-size: 18px;
-                width: 40%;
-            }
+    
+        .info {
+            // margin-left: 40px;
+            width: 300px;
         }
-    }
-
-    .block {
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
-
-        .reviews {
+    
+        .location {
+            // margin-left: 40px;
             display: flex;
             align-items: center;
-            flex-direction: column;
-            width: 35%;
-            margin-bottom: 20px;
-    
-            .header {
-                height: 60px;
-                width: 100%;
-                line-height: 60px;
-                background-color: darkgray;
-                font-size: 35px;
-                text-align: center;
-                border-radius: 8px 8px 0 0;
-            }
-    
-            .container {
-                display: flex;
-                align-items: center;
-                background-color: rgb(234, 231, 231);
-                width: 100%;
-                justify-content: center;
-    
-                .all-reviews {
-                    display: flex;
-                    flex-direction: column;
-                    // gap: 12px
-                }
-    
-            
-            }
         }
+    
+        h2 {
+            margin-top: 50px;
+            // margin-left: 40px;
+        }
+    
+        ul {
+            width: 140px;
+            padding: 0;
+            li {
+                display: flex;
+                justify-content: space-between;
 
-        .add-review {
-            width: 40%;
-
-            .header {
-                height: 60px;
-                width: 100%;
-                line-height: 60px;
-                background-color: darkgray;
-                font-size: 35px;
-                text-align: center;
-                border-radius: 8px 8px 0 0;
-            }
-
-            form {
-                background-color: rgb(234, 231, 231);
-                // margin: 10px;
-                padding: 10px;
+                
             }
         }
     }
+
+    // .reviews {
+
+    // }
+
+        .add-review {
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 400px;
+
+                input {
+                    height: 20px;
+                    padding: 4px 4px 0 4px;
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                }
+
+                textarea {
+                    font-size: 14px;
+                    padding: 4px 2px 0 4px;
+                }
+
+                .btn-container {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 10px;
+
+                    button {
+                        width: 100px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
 }

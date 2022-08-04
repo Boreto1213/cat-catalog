@@ -1,39 +1,50 @@
-<div class="wrapper">
+<div class="container"> 
     <div class="information">
-        <div class="header">Information</div>
-        <div class="content">
-            <div class="image"></div>
-            <div class="info">We are a group of enthousiasts that share the same passion for cats. Our goal is to share that passion with people from all over the world!</div>
+        <h1>About us</h1>
+        <p class="info">We are a group of peole that share the same love and passion for cats espessially for british shorthairs! Our goal is to share that goal with people all over the world! Our beautiful kittens and cats will be great companions to you and will love you forever. We are always happy to assist you in your choice.</p>
+        <span class="location"><mat-icon> location_on</mat-icon><p>Illinois, Midwest United States</p></span>
+    
+        <h2>Working hours</h2>
+    
+        <ul>
+            <li>Mon <span>9am-5pm</span></li>
+            <li>Tue <span>9am-5pm</span></li>
+            <li>Wen <span>9am-5pm</span></li>
+            <li>Thu <span>9am-5pm</span></li>
+            <li>Fri <span>9am-5pm</span></li>
+            <li>Sat <span>10am-2pm</span></li>
+            <li>Sun <span>closed</span></li>
+    
+        </ul>
+    </div>
+
+    <div class="reviews">
+        <h2>Reviews</h2>
+
+        <div class="reviews-container">
+            <app-review *ngFor="let review of reviews"></app-review>
         </div>
     </div>
-    <div class="block">
-        <div class="reviews">
-            <div class="header">Reviews</div>
-            <div class="container">
-                <div class="all-reviews">
-                    <app-review *ngFor="let review of reviews"></app-review>
-                </div>
-            </div>
-        </div>
 
-        <div class="add-review">
-            <div class="header">Add a Review</div>
-            
-            <form>
-                <label for="name">Your name:</label><br>
-                <input type="text" name="name" id="name">
+    <div class="add-review">
+        <h2>Add review</h2>
+        <!-- <p>Feel free to share your experience with us!</p> -->
 
-                <br>
-                <br>
+        <form>
+            <label for="names">Name:</label>
+            <input type="text" name="names" id="names" placeholder="Enter your name here...">
 
-                <label for="text">Your review:</label><br>
-                <textarea name="text" id="text" cols="60" rows="5"></textarea>
+            <label for="names">Email:</label>
+            <input type="text" name="email" id="email" placeholder="Enter your email here...">
 
-                <br>
+            <label for="review">Review:</label>
+            <textarea name="review" id="review" cols="47" rows="10" placeholder="Enter your review here..."></textarea>
+
+            <div class="btn-container">
                 <button>Submit</button>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
 </div>
 
-<router-outlet></router-outlet>
+<!-- We are a group of enthousiasts that share the same passion for cats. Our goal is to share that passion with people from all over the world! -->
