@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ContactUsService } from '../shared/services/contact-us-pop-up.service';
 
 @Component({
   selector: 'app-home-page',
@@ -8,12 +9,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private router: Router, public route: ActivatedRoute) { }
+  constructor(private router: Router, public route: ActivatedRoute, private contactUsService: ContactUsService) { }
 
   ngOnInit(): void {
   }
 
   toCatalog(): void {
     this.router.navigate(['/catalog']);
+  }
+
+  toContactUs(): void {
+    this.contactUsService.openCloseService.next(true);
   }
 }
