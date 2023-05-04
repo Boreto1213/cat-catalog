@@ -1,42 +1,52 @@
 <div class="pop-up">
-    <div class="pop-up-body">
-        <div class="header">
-            <h1>Contact information</h1>
-            <mat-icon class="close-btn" (click)="close()">close</mat-icon>
-        </div>
-        <hr>
-
-        <ul>
-            <li>
-                <p>Visit our social media:</p>
-                <div class="row">
-                    <div class="fb"></div>
-                    <!-- <span> - </span> -->
-                    <p><a href="#">British Short Hair in Illinois</a></p>
-                </div>
-            </li>
-            <li>
-                <p>Call us:</p>
-                <div class="row">
-                    <mat-icon> phone</mat-icon>
-                    <!-- <span> - </span> -->
-                    <p class="info">0889295647</p>
-                </div>
-            </li>
-            <li>
-                <p>Email us:</p>
-                <div class="row">
-                    <mat-icon>mail</mat-icon>
-                    <!-- <span> - </span> -->
-                    <p class="info">british.shorhair@gmail.com</p>
-                </div>
-            </li>
-        </ul>
-
-        <div class="message-container">
-            <h5 class="message">Feel free to ask any question. We are more than happy to answer them! :)</h5>
-        </div>
+  <div class="pop-up-body">
+    <div class="header">
+      <h1>Contact information</h1>
+      <mat-icon class="close-btn" (click)="close()">close</mat-icon>
     </div>
+    <hr />
+
+    <div style="display:flex; justify-content: space-evenly;">
+      <span style="display: flex; gap: 6px;">
+        <div class="fb"></div>
+        <p><a href="#">British Short Hair in Illinois</a></p></span
+      >
+      <!-- <span> - </span> -->
+      <span style="display: flex; gap: 6px;">
+        <mat-icon> phone</mat-icon>
+        <p class="info">0889295647</p>
+      </span>
+      <span style="display: flex; gap: 6px;"
+        ><mat-icon>mail</mat-icon>
+        <p class="info">british.shorhair@gmail.com</p></span
+      >
+    </div>
+
+    <form style="padding: 20px" #emailForm="ngForm" (ngSubmit)="onSubmit(emailForm.value)">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" name="email" class="form-control" id="email" required placeholder="name@example.com" ngModel>
+        </div>
+        <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="email" name="subject" class="form-control" id="subject" required placeholder="Subject..." ngModel>
+        </div>
+        <div class="mb-3">
+            <label for="text" class="form-label">Content</label>
+            <textarea class="form-control" name="content" id="text" required rows="5" ngModel></textarea>
+        </div>
+
+        <div style="display:flex; justify-content: center">
+            <button type="submit" class="btn btn-dark">Send Email</button>
+        </div>
+    </form>
+
+    <div class="message-container">
+      <h5 class="message">
+        Feel free to ask any question. We are more than happy to answer them! :)
+      </h5>
+    </div>
+  </div>
 </div>
 
 <div class="pop-up-background"></div>

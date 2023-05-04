@@ -4,7 +4,26 @@
         <p class="info">We are a group of peole that share the same love and passion for cats espessially for british shorthairs! Our goal is to share that goal with people all over the world! Our beautiful kittens and cats will be great companions to you and will love you forever. We are always happy to assist you in your choice.</p>
         <span class="location"><mat-icon> location_on</mat-icon><p>Illinois, Midwest United States</p></span>
     
-        <h2>Working hours</h2>
+        <div class="add-review">
+            <h2>Add review</h2>
+            <!-- <p>Feel free to share your experience with us!</p> -->
+    
+            <form>
+                <label for="names">Name:</label>
+                <input type="text" name="names" id="names" placeholder="Enter your name here...">
+    
+                <label for="names">Email:</label>
+                <input type="text" name="email" id="email" placeholder="Enter your email here...">
+    
+                <label for="review">Review:</label>
+                <textarea name="review" id="review" cols="47" rows="10" placeholder="Enter your review here..."></textarea>
+    
+                <div class="btn-container">
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>
+        <!-- <h2>Working hours</h2>
     
         <ul>
             <li>Mon <span>9am-5pm</span></li>
@@ -15,35 +34,15 @@
             <li>Sat <span>10am-2pm</span></li>
             <li>Sun <span>closed</span></li>
     
-        </ul>
+        </ul> -->
     </div>
 
     <div class="reviews">
         <h2>Reviews</h2>
 
         <div class="reviews-container">
-            <app-review *ngFor="let review of reviews"></app-review>
+            <app-review *ngFor="let review of reviews" [review]="review"></app-review>
         </div>
-    </div>
-
-    <div class="add-review">
-        <h2>Add review</h2>
-        <!-- <p>Feel free to share your experience with us!</p> -->
-
-        <form>
-            <label for="names">Name:</label>
-            <input type="text" name="names" id="names" placeholder="Enter your name here...">
-
-            <label for="names">Email:</label>
-            <input type="text" name="email" id="email" placeholder="Enter your email here...">
-
-            <label for="review">Review:</label>
-            <textarea name="review" id="review" cols="47" rows="10" placeholder="Enter your review here..."></textarea>
-
-            <div class="btn-container">
-                <button>Submit</button>
-            </div>
-        </form>
     </div>
 </div>
 

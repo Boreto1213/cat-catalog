@@ -27,6 +27,9 @@ import { ContactUsPopUpComponent } from './contact-us-pop-up/contact-us-pop-up.c
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactUsService } from './shared/services/contact-us-pop-up.service';
+import { LoginComponent } from './login/login.component';
+import { UserService } from './shared/services/user.service';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import { ContactUsService } from './shared/services/contact-us-pop-up.service';
     AboutUsComponent,
     ReviewComponent,
     DetailsPopUpComponent,
-    ContactUsPopUpComponent
+    ContactUsPopUpComponent,
+    LoginComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +57,7 @@ import { ContactUsService } from './shared/services/contact-us-pop-up.service';
     MatIconModule,
     BrowserAnimationsModule
   ],
-  providers: [CatService, ContactUsService],
+  providers: [CatService, ContactUsService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

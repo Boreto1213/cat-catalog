@@ -17,8 +17,11 @@ export class CatCatalogComponent implements OnInit {
   constructor(private catService: CatService, public route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.catService.fetchCats();
-    this.cats = this.catService.getCats();
+    this.catService.loadCats();
+    this.catService.getCats().subscribe(cats => {
+      this.cats = cats;
+    });
+    console.log("Cats from .ts: " + this.cats.length);
   }
 
   onSave(): void {
