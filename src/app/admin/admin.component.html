@@ -1,18 +1,34 @@
 <div class="wrapper">
-    <form>
+    <form style="width: 60%" #addCatFrom="ngForm" (ngSubmit)="onSubmit(addCatFrom.value, photos)" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="email" class="form-control" id="name" name="name" aria-describedby="emailHelp" ngModel>
+      </div>
+      <div class="mb-3">
+        <label for="sex" class="form-label">Sex:</label>
+        <input type="email" class="form-control" id="sex" name="sex" aria-describedby="emailHelp" ngModel>
+      </div>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          <label for="age" class="form-label">Age:</label>
+          <input type="email" class="form-control" id="age" name="age" aria-describedby="emailHelp" ngModel>
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <label for="breed" class="form-label">Breed:</label>
+          <input type="password" class="form-control" id="breed" name="breed" ngModel>
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        <div class="mb-3">
+          <label for="color" class="form-label">Color:</label>
+          <input type="password" class="form-control" id="color" name="color" ngModel>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="mb-3">
+          <label for="price" class="form-label">Price:</label>
+          <input type="email" class="form-control" id="price" name="price" aria-describedby="emailHelp" ngModel>
+        </div>
+          <div class="form-group">
+            <label for="photos">Photos:</label><br>
+            <input #photos multiple="" type="file" class="form-control-file" id="photos" name="photos" ngModel>
+          </div>
+        <div style="display:flex; justify-content:center; padding: 20px">
+          <button type="submit" class="btn btn-dark">Add</button></div>
       </form>
 </div>

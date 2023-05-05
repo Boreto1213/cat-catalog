@@ -1,0 +1,64 @@
+<nav class="navbar navbar-dark bg-dark fixed-top" style="width: 100vw;">
+    <div class="container-fluid">
+      <div class="logo-container">
+        <div class="logo"></div>
+        <a class="navbar-brand" href="#">Purrfect British</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" style="width: 100vw;">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" ><nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navigation</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link link-btn" aria-current="page" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link link-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" routerLink="catalog" routerLinkActive="active" ariaCurrentWhenActive="page">Catalog</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="link-btn nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" routerLink="about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link link-btn" (click)="showContactUsFunc()">Contact us</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <li class="nav-item">
+            <a class="nav-link link-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-current="page" routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" routerLink="catalog" routerLinkActive="active" ariaCurrentWhenActive="page">Catalog</a>
+          </li>
+          <li class="nav-item">
+            <a class="link-btn nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" routerLink="about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-btn" (click)="showContactUsFunc()">Contact us</a>
+          </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<app-contact-us-pop-up *ngIf="showContactUs"></app-contact-us-pop-up>

@@ -1,0 +1,32 @@
+.link-btn {
+    color: black
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+        // cursor: default;
+        // color: #F2AA4CFF;
+        width: 30px;
+        height: 30px;
+        
+        background-image: url('../../../../assets/logo/cat.png');
+        // background-image: url('../../../../assets/logo/kitty.png');
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .logo-text {
+        color: #F2AA4CFF;
+        font-size: 14px;
+    }
+}
+
+.active {
+    color: black !important;
+}

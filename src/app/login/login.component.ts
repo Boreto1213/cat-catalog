@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     this.userService.loadUsers();
     this.userService.getUsers().subscribe(users => {
       let userMatch = users.find(user => user.password === data.password && user.email === data.email);
-
+      console.log(userMatch);
       if (userMatch) {
         this.router.navigate(['/admin']);
       } else {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  // showContactUs = false;
+  isMobile = false;
 
   constructor() {}
+
+  ngOnInit() {
+    this.isMobile = window.innerWidth < 900;
+    console.log(this.isMobile)
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.isMobile = event.target.innerWidth < 900;
+  }
 }

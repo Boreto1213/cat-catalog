@@ -12,4 +12,9 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(data: any, input: HTMLInputElement): void {
+    console.log(data.photos);
+    console.log(input);
+    console.log(input.files);
+  }
 }

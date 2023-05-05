@@ -1,16 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 import { ContactUsService } from '../../services/contact-us-pop-up.service';
 
-
 @Component({
-  selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.scss']
+  selector: 'app-nav-bar-mobile',
+  templateUrl: './nav-bar-mobile.component.html',
+  styleUrls: ['./nav-bar-mobile.component.scss']
 })
-export class NavBarComponent implements OnInit {
+export class NavBarMobileComponent implements OnInit {
   showContactUs = false;
-
+  
   constructor(private contactUsService: ContactUsService) { }
 
   ngOnInit(): void {

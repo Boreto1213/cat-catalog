@@ -1,4 +1,4 @@
-<div class="background-image">
+<div class="background-image" *ngIf="!isMobile">
 
   <div class="container">
     <div class="left-content">
@@ -15,15 +15,13 @@
       </div>
     </div>
   </div>
-    <!-- <video muted loop autoplay class="background-video">
-        <source src="../../assets/cat-background-video-muted.mp4" type="video/mp4">
-        <source src="../../assets/cat-background-video-muted.mp4" type="video/webm">
-    </video>
-    
-    <div class="content">
-      <h3>Find your newest family member!</h3>
-      <a (click)="toCatalog()">To Catalog</a>
-    </div> -->
+</div>
+
+<div class="mobile-container" *ngIf="isMobile">
+  <h1 class="title">Purrfect British</h1>
+<div class="logo"></div>
+<h5 class="text">Explore our selection of British Shorthairs!</h5>
+<button class="btn btn-dark" (click)="toCatalog()">To Catalog</button>
 </div>
 
 <router-outlet></router-outlet>

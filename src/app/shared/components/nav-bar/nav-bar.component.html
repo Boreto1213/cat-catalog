@@ -1,5 +1,8 @@
 <header>
-    <div class="logo"></div>
+    <div class="logo-container">
+        <div class="logo"></div>
+        <div class="logo-text">Purrfect British</div>
+    </div>
   
     <ul class="nav-list">
         <li class="links"><a class="underline" routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">Home page</a></li>
@@ -8,6 +11,8 @@
         <li class="contact-us"><a (click)="showContactUsFunc()">Contact us</a></li>
     </ul>
 </header>
+
+
 
 <app-contact-us-pop-up *ngIf="showContactUs"></app-contact-us-pop-up>
 

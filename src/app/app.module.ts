@@ -31,6 +31,11 @@ import { LoginComponent } from './login/login.component';
 import { UserService } from './shared/services/user.service';
 import { AdminComponent } from './admin/admin.component';
 
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import { NavBarMobileComponent } from './shared/components/nav-bar-mobile/nav-bar-mobile.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +48,8 @@ import { AdminComponent } from './admin/admin.component';
     DetailsPopUpComponent,
     ContactUsPopUpComponent,
     LoginComponent,
-    AdminComponent
+    AdminComponent,
+    NavBarMobileComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +61,9 @@ import { AdminComponent } from './admin/admin.component';
     MatFormFieldModule,
     MatCardModule,
     MatIconModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
     BrowserAnimationsModule
   ],
   providers: [CatService, ContactUsService, UserService],

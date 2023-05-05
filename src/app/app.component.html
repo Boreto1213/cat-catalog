@@ -1,4 +1,10 @@
-<app-nav-bar></app-nav-bar>
+<div *ngIf="isMobile">
+    <app-nav-bar-mobile></app-nav-bar-mobile>
+</div>
+
+<div *ngIf="!isMobile">
+    <app-nav-bar></app-nav-bar>
+</div>
 
 <router-outlet></router-outlet>
 

@@ -15,6 +15,7 @@ body {
     background-position: center;
     // background-repeat: no-repeat;
     background-size: contain;
+    user-select: none;
 
     .container {
         display: flex;
@@ -160,4 +161,38 @@ body {
     //             }
     //         }
     //     }
+}
+
+.mobile-container {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 10vh;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+
+  background-color: #101820FF;
+
+  .logo {
+    width: 120px;
+    height: 120px;
+    
+    background-image: url('../../assets/logo/cat.png');
+    // background-image: url('../../../../assets/logo/kitty.png');
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .title {
+    color: #F2AA4CFF;
+  }
+
+  .text {
+    color: white;
+    text-align: center;
+  }
 }
