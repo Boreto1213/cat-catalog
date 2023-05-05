@@ -110,3 +110,92 @@
 body.pop-up-modal-open {
     overflow: hidden;
 }
+
+.mobile-container {
+    position: fixed;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding-top: 80px;
+
+    background-color: white;
+
+    z-index: 900;
+
+    .top-btn {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 25px;
+    }
+
+    .images {
+        display: flex;
+        height: 40vh;
+        justify-content: center;
+        align-items: center;
+
+        .arrow {
+            cursor: pointer;
+        }
+    
+        .image {
+            width: 50%;
+            height: 80%;
+            // margin: 20px;
+    
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    }
+
+    .information {
+        font-size: 22px;
+
+        ul {
+            padding: 0;
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                margin: 10px;
+                padding: 0 20px;
+            }
+        }
+
+        
+
+        .buttons {
+            display: flex;
+            justify-content: center;                
+
+            button {
+                margin: 6px;
+                border: none;
+                font-size: 16px;
+                border-radius: 6px;
+                cursor: pointer;
+                height: 40px;
+
+            }
+
+            .contact-us {
+                width: 140px;
+                color: #101820FF;
+                background-color: #F2AA4CFF;
+                transition: all 0.9 ease-in-out;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                &:active {
+                    background-color: rgb(190, 137, 68);
+                }
+            }
+        }
+    }
+}

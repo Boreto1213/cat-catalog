@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Cat } from 'src/app/shared/models/cat.model';
 import { CatService } from 'src/app/shared/services/cat.service';
@@ -27,16 +27,22 @@ import { ContactUsService } from 'src/app/shared/services/contact-us-pop-up.serv
   ]
 })
 export class DetailsPopUpComponent implements OnInit {
+  isMobile = false;
   cat!: Cat;
   photoIndx: number = 0;
-  // photoAnimationState: string = 'left';
-  // urls: string[] = [];
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.isMobile = event.target.innerWidth < 900;
+  }
 
   constructor(private route: ActivatedRoute, private catService: CatService, private router: Router, private contactUsService: ContactUsService) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id'];
     this.cat = this.catService.getCatById(id);
+    this.isMobile = window.innerWidth < 900;
+
 
     // this.urls.push(this.cat.img[0]);
   }
