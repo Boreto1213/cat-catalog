@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 
-const sgMail = require('@sendgrid/mail')
+const sgMail = require('@sendgrid/mail');
 
 // const httpProxy = require('http-proxy');
 
@@ -14,7 +14,7 @@ app.use(express.json())
 
 app.post('/send-email', async (req, res) => {
   const { email, content, fromEmail, toEmail, apiKey } = req.body
-  sgMail.setApiKey("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");
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   const body = {
     to: toEmail,
@@ -23,6 +23,8 @@ app.post('/send-email', async (req, res) => {
     text: content + `\n From customer: ${email}`,
     html: `<p>${content}</p>`
   }
+
+  console.log(body);
 
   try {
     await sgMail.send(body)

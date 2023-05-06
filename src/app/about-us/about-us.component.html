@@ -1,28 +1,18 @@
 <div class="container"> 
     <div class="information">
-        <h1>About us</h1>
-        <p class="info">We are a group of peole that share the same love and passion for cats espessially for british shorthairs! Our goal is to share that goal with people all over the world! Our beautiful kittens and cats will be great companions to you and will love you forever. We are always happy to assist you in your choice.</p>
-        <span class="location"><mat-icon> location_on</mat-icon><p>Illinois, Midwest United States</p></span>
-    
-        <div class="add-review">
-            <h2>Add review</h2>
-            <!-- <p>Feel free to share your experience with us!</p> -->
-    
-            <form>
-                <label for="names">Name:</label>
-                <input type="text" name="names" id="names" placeholder="Enter your name here...">
-    
-                <label for="names">Email:</label>
-                <input type="text" name="email" id="email" placeholder="Enter your email here...">
-    
-                <label for="review">Review:</label>
-                <textarea name="review" id="review" cols="47" rows="10" placeholder="Enter your review here..."></textarea>
-    
-                <div class="btn-container">
-                    <button>Submit</button>
-                </div>
-            </form>
+        <div class="top-info">
+            <h1>About us</h1>
+            <div class="info">We are a group of peole that share the same love and passion for cats espessially for british shorthairs! Our goal is to share that goal with people all over the world! Our beautiful kittens and cats will be great companions to you and will love you forever. We are always happy to assist you in your choice.</div>
+            <span class="location"><mat-icon> location_on</mat-icon><p>Illinois, Midwest United States</p></span>
         </div>
+
+        <div class="images">
+            <img src="../../assets/images/cat2.jpg" alt="Cant't load image!" class="image">
+            <img src="../../assets/images/cats.jpg" alt="Cant't load image!" class="image">
+            <!-- <img src="../../assets/images/cat.jpg" alt="Cant't load image!" class="image"> -->
+            <img src="../../assets/images/cats2.jpg" alt="Cant't load image!" class="image">
+        </div>
+        
         <!-- <h2>Working hours</h2>
     
         <ul>
@@ -35,13 +25,33 @@
             <li>Sun <span>closed</span></li>
     
         </ul> -->
-    </div>
-
-    <div class="reviews">
-        <h2>Reviews</h2>
-
-        <div class="reviews-container">
-            <app-review *ngFor="let review of reviews" [review]="review"></app-review>
+    </div >
+    
+    <div class="reviews-section">
+        <div class="add-review">
+            <h2>Add review</h2>
+            <form  #emailForm="ngForm" (ngSubmit)="onSubmit(emailForm.value)">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input style="height: 26px;" type="text" name="name" class="form-control" id="name" required ngModel>
+                </div>
+                <div class="mb-3">
+                    <label for="text2" class="form-label">Review</label>
+                    <textarea class="form-control" name="review" id="text2" required rows="5" ngModel></textarea>
+                </div>
+        
+                <div style="display:flex; justify-content: center">
+                    <button type="submit" class="btn btn-dark">Publish</button>
+                </div>
+            </form>
+        </div>
+    
+        <div class="reviews">
+            <h2>Reviews</h2>
+    
+            <div class="reviews-container">
+                <app-review  *ngFor="let review of reviews" [review]="review"></app-review>
+            </div>
         </div>
     </div>
 </div>

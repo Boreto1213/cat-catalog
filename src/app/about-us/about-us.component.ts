@@ -27,5 +27,7 @@ export class AboutUsComponent implements OnInit {
     // })
   }
 
-
+  onSubmit(data: any) {
+    // TODO...
+  }
 }

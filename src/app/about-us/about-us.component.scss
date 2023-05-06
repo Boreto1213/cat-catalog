@@ -1,23 +1,35 @@
 .container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     gap: 80px;
     margin-top: 110px;
-    margin-left: 40px;
+    margin-left: 60px;
+    // margin-right: 40px;
+
     padding-bottom: 60px;
 
     .information {
-        h1 {
-            // margin-left: 40px;
+        display: flex;
+        justify-content: space-between;
+        // width: 100vw;
+
+        .images {
+            display: flex;
+            justify-content: flex-end;
+            height: 100%;
+
+            .image {
+                width: 30%;
+                height: 70%;
+            }
         }
     
         .info {
-            // margin-left: 40px;
             width: 300px;
         }
     
         .location {
-            // margin-left: 40px;
             display: flex;
             align-items: center;
             
@@ -28,7 +40,6 @@
     
         h2 {
             margin-top: 50px;
-            // margin-left: 40px;
         }
     
         ul {
@@ -37,44 +48,92 @@
             li {
                 display: flex;
                 justify-content: space-between;
-
-                
             }
         }
     }
 
-    // .reviews {
+    .reviews-section {
+        display: flex; 
+        justify-content: space-between;
+    }
 
-    // }
+    .add-review {
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
 
-        .add-review {
-            form {
+            input {
+                height: 20px;
+                padding: 4px 4px 0 4px;
+                margin-bottom: 10px;
+                font-size: 14px;
+            }
+
+            textarea {
+                font-size: 14px;
+                padding: 4px 2px 0 4px;
+            }
+
+            .btn-container {
                 display: flex;
-                flex-direction: column;
-                width: 400px;
+                justify-content: center;
+                margin-top: 10px;
 
-                input {
-                    height: 20px;
-                    padding: 4px 4px 0 4px;
-                    margin-bottom: 10px;
-                    font-size: 14px;
-                }
-
-                textarea {
-                    font-size: 14px;
-                    padding: 4px 2px 0 4px;
-                }
-
-                .btn-container {
-                    display: flex;
-                    justify-content: center;
-                    margin-top: 10px;
-
-                    button {
-                        width: 100px;
-                        height: 40px;
-                    }
+                button {
+                    width: 100px;
+                    height: 40px;
                 }
             }
         }
+    }
 }
+
+@media only screen and (max-width: 900px) {
+    .container {
+        margin: 0;
+        align-items: center;
+    }
+
+    .top-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .info {
+        text-align: center;
+        width: 100% !important;
+    }
+
+    .information {
+        padding-top: 70px;
+        flex-direction: column;
+    }
+
+    .images {
+        margin-top: 10px;
+        justify-content: center !important;
+    }
+
+    .reviews-section {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        .add-review {
+            width: 100%;
+
+            form {
+                width: 100%;
+            }
+        }
+
+        .reviews {
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
+
+    
+  }

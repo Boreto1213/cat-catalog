@@ -19,7 +19,7 @@ export class NavBarMobileComponent implements OnInit {
     ) 
   }
 
-  showContactUsFunc(): void {
-    this.contactUsService.openCloseService.next(true);
+  showContactUsFunc(flag: boolean): void {
+    this.contactUsService.openCloseService.next(flag);
   }
 }

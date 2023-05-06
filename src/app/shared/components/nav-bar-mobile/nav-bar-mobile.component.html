@@ -26,16 +26,16 @@
                 <div class="offcanvas-body">
                   <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                      <a class="nav-link link-btn" aria-current="page" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+                      <a class="nav-link link-btn" (click)="showContactUsFunc(false)" aria-current="page" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link link-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" routerLink="catalog" routerLinkActive="active" ariaCurrentWhenActive="page">Catalog</a>
+                      <a class="nav-link link-btn" (click)="showContactUsFunc(false)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" routerLink="catalog" routerLinkActive="active" ariaCurrentWhenActive="page">Catalog</a>
                     </li>
                     <li class="nav-item">
-                      <a class="link-btn nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" routerLink="about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About us</a>
+                      <a class="link-btn nav-link" (click)="showContactUsFunc(false)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" routerLink="about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About us</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link link-btn" (click)="showContactUsFunc()">Contact us</a>
+                      <a class="nav-link link-btn" (click)="showContactUsFunc(true)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar">Contact us</a>
                     </li>
                   </ul>
                 </div>
@@ -43,16 +43,16 @@
             </div>
           </nav>
           <li class="nav-item">
-            <a class="nav-link link-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-current="page" routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+            <a class="nav-link link-btn" (click)="showContactUsFunc(false)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-current="page" routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" routerLink="catalog" routerLinkActive="active" ariaCurrentWhenActive="page">Catalog</a>
+            <a class="nav-link link-btn" (click)="showContactUsFunc(false)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" routerLink="catalog" routerLinkActive="active" ariaCurrentWhenActive="page">Catalog</a>
           </li>
           <li class="nav-item">
-            <a class="link-btn nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" routerLink="about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About us</a>
+            <a class="link-btn nav-link" (click)="showContactUsFunc(false)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" routerLink="about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-btn" (click)="showContactUsFunc()">Contact us</a>
+            <a class="nav-link link-btn" (click)="showContactUsFunc(true)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar">Contact us</a>
           </li>
           </ul>
 
