@@ -21,7 +21,6 @@ export class CatCatalogComponent implements OnInit {
     this.catService.getCats().subscribe(cats => {
       this.cats = cats;
     });
-    console.log("Cats from .ts: " + this.cats.length);
   }
 
   onSave(): void {

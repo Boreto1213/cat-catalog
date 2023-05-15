@@ -26,12 +26,10 @@ export class CatService {
         this.fetchCats().subscribe(cats => {
             this.cats = cats;
             this.catsSubject.next(this.cats);
-            console.log("Cats from loadCats: " + this.cats.length);
         });
     }
 
     getCats(): Observable<Cat[]> {
-        console.log("Cats from getCats: " + this.cats.length);
         return this.catsSubject.asObservable();
     }
 

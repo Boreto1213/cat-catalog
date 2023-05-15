@@ -35,6 +35,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { NavBarMobileComponent } from './shared/components/nav-bar-mobile/nav-bar-mobile.component';
+import { CatMongodbService } from './shared/services/cat-mongodb.service';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,7 @@ import { NavBarMobileComponent } from './shared/components/nav-bar-mobile/nav-ba
     MatListModule,
     BrowserAnimationsModule
   ],
-  providers: [CatService, ContactUsService, UserService],
+  providers: [CatService, ContactUsService, UserService, CatMongodbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

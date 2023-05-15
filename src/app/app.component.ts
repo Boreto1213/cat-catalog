@@ -12,7 +12,6 @@ export class AppComponent {
 
   ngOnInit() {
     this.isMobile = window.innerWidth < 900;
-    console.log(this.isMobile)
   }
 
   @HostListener('window:resize', ['$event'])
