@@ -7,6 +7,7 @@ import { catchError, tap, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class EmailService {
+private url = "http://localhost:5000";
 private fromEmail = "bodam02@abv.bg";
 private toEmail = "borisvd4@gmail.com"
 
@@ -48,7 +49,7 @@ const data = {...emailData, apiKey: this.sendEmail, toEmail: this.toEmail, fromE
   });
   console.log(data);
   // Make a POST request to the SendGrid API to send the email
-  this.http.post('http://localhost:3000/send-email', data, { headers })
+  this.http.post(this.url + "/emails/send", data, { headers })
     .pipe(
       tap(response => console.log(response)),
       catchError(error => {

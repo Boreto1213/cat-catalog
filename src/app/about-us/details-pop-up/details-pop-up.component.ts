@@ -44,7 +44,7 @@ export class DetailsPopUpComponent implements OnInit {
     this.isMobile = window.innerWidth < 900;
 
 
-    // this.urls.push(this.cat.img[0]);
+    // this.urls.push(this.cat.images[0]);
   }
 
   goBackToCatalog(): void {
@@ -53,11 +53,11 @@ export class DetailsPopUpComponent implements OnInit {
 
   changePhoto(flag: boolean): void {
     if (flag) {
-      this.photoIndx = ++this.photoIndx % this.cat.img.length;
+      this.photoIndx = ++this.photoIndx % this.cat.images.length;
     } else {
       this.photoIndx--;
       if (this.photoIndx < 0) {
-        this.photoIndx = this.cat.img.length -1;
+        this.photoIndx = this.cat.images.length -1;
       }
     }
 

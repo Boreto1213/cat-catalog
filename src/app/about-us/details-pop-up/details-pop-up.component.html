@@ -4,7 +4,7 @@
 
         <mat-icon class="arrow" (click)="changePhoto(false)">chevron_left</mat-icon>
         <!-- <div class="image" [@leftRightFade]="photoAnimationState" [ngStyle]="{'background-image': 'url('+cat.img[photoIndx]+')'}"></div> -->
-        <div class="image" [ngStyle]="{'background-image': 'url('+cat.img[photoIndx]+')'}"></div>
+        <div class="image" [ngStyle]="{'background-image': 'url('+cat.images[photoIndx]+')'}"></div>
 
         <mat-icon class="arrow" (click)="changePhoto(true)">chevron_right</mat-icon>
         
@@ -37,7 +37,7 @@
     <div class="images">
         <mat-icon class="arrow" (click)="changePhoto(false)">chevron_left</mat-icon>
         <!-- <div class="image" [@leftRightFade]="photoAnimationState" [ngStyle]="{'background-image': 'url('+cat.img[photoIndx]+')'}"></div> -->
-        <div class="image" [ngStyle]="{'background-image': 'url('+cat.img[photoIndx]+')'}"></div>
+        <div class="image" [ngStyle]="{'background-image': 'url('+cat.images[photoIndx]+')'}"></div>
 
         <mat-icon class="arrow" (click)="changePhoto(true)">chevron_right</mat-icon>
     </div>
