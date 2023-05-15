@@ -30,6 +30,7 @@ export class ContactUsPopUpComponent implements OnInit {
   }
 
   async onSubmit(data: Email) {
-    await this.emailService.sendEmail(data);
+    this.emailService.sendEmail(data);
+    console.log("From .ts file!");
   }
 }
