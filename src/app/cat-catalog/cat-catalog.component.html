@@ -1,7 +1,13 @@
 <div class="wrapper">
     <h1>Choose from our finest selection of <span>British Shorthairs</span>!</h1>
+
+
     <div class="catalog">
         <app-item-card [cat]="cat" *ngFor="let cat of cats"></app-item-card>
+
+        <ng-template *ngIf="isLoading">
+            
+        </ng-template>
     </div>
 </div>
 <router-outlet></router-outlet>

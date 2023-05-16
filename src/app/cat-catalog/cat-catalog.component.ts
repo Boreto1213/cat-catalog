@@ -11,6 +11,7 @@ import { CatService } from '../shared/services/cat.service';
 export class CatCatalogComponent implements OnInit {
   cats: Cat[] = [];
 
+  isLoading = true;
   showMoreClickedFlag = false;
   selectedCat!: Cat;
 
@@ -20,6 +21,7 @@ export class CatCatalogComponent implements OnInit {
     this.catService.loadCats();
     this.catService.getCats().subscribe(cats => {
       this.cats = cats;
+      this.isLoading = false;
     });
   }
 
