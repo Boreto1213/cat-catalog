@@ -22,10 +22,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { DetailsPopUpComponent } from './about-us/details-pop-up/details-pop-up.component';
 
 import { MatIconModule } from '@angular/material/icon';
-import { ContactUsPopUpComponent } from './contact-us-pop-up/contact-us-pop-up.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ContactUsService } from './shared/services/contact-us-pop-up.service';
 import { LoginComponent } from './login/login.component';
 import { UserService } from './shared/services/user.service';
 import { AdminComponent } from './admin/admin.component';
@@ -38,6 +36,7 @@ import { CatService } from './shared/services/cat.service';
 
 import { NgToastModule } from 'ng-angular-popup';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -49,10 +48,10 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     AboutUsComponent,
     ReviewComponent,
     DetailsPopUpComponent,
-    ContactUsPopUpComponent,
     LoginComponent,
     AdminComponent,
     NavBarMobileComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,7 +70,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     NgToastModule,
     NgxSkeletonLoaderModule.forRoot(),
   ],
-  providers: [ContactUsService, UserService, CatService],
+  providers: [UserService, CatService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

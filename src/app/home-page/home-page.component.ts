@@ -1,6 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ContactUsService } from '../shared/services/contact-us-pop-up.service';
 
 @Component({
   selector: 'app-home-page',
@@ -17,7 +16,7 @@ export class HomePageComponent implements OnInit {
     this.isMobile = event.target.innerWidth < 900;
   }
 
-  constructor(private router: Router, public route: ActivatedRoute, private contactUsService: ContactUsService) { }
+  constructor(private router: Router, public route: ActivatedRoute) { }
 
   ngOnInit() {
     this.isMobile = window.innerWidth < 900;
@@ -29,6 +28,6 @@ export class HomePageComponent implements OnInit {
   }
 
   toContactUs(): void {
-    this.contactUsService.openCloseService.next(true);
+    this.router.navigate(['/contact-us']);
   }
 }

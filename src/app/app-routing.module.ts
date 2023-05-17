@@ -4,9 +4,9 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { CatCatalogComponent } from './cat-catalog/cat-catalog.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { DetailsPopUpComponent } from './about-us/details-pop-up/details-pop-up.component';
-import { ContactUsPopUpComponent } from './contact-us-pop-up/contact-us-pop-up.component';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent, children: [
@@ -17,6 +17,9 @@ const routes: Routes = [
     // {path: 'contact-us', component: ContactUsPopUpComponent}
   ]},
   {path: 'about-us', component: AboutUsComponent, children: [
+    // {path: 'contact-us', component: ContactUsPopUpComponent}
+  ]},
+  {path: 'contact-us', component: ContactUsComponent, children: [
     // {path: 'contact-us', component: ContactUsPopUpComponent}
   ]},
   {path: 'login', component: LoginComponent, children: [

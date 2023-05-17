@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactUsService } from '../../services/contact-us-pop-up.service';
 
 @Component({
   selector: 'app-nav-bar-mobile',
@@ -9,17 +8,7 @@ import { ContactUsService } from '../../services/contact-us-pop-up.service';
 export class NavBarMobileComponent implements OnInit {
   showContactUs = false;
   
-  constructor(private contactUsService: ContactUsService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.contactUsService.openCloseService.subscribe(
-      (flag: boolean) => {
-        this.showContactUs = flag;
-      }
-    ) 
-  }
-
-  showContactUsFunc(flag: boolean): void {
-    this.contactUsService.openCloseService.next(flag);
-  }
+  ngOnInit(): void { }
 }

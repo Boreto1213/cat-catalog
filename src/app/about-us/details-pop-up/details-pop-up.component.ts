@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Cat } from 'src/app/shared/models/cat.model';
 import { CatService } from 'src/app/shared/services/cat.service';
 import { animate, state, style, transition, trigger } from '@angular/animations'
-import { ContactUsService } from 'src/app/shared/services/contact-us-pop-up.service';
 
 
 @Component({
@@ -36,7 +35,7 @@ export class DetailsPopUpComponent implements OnInit {
     this.isMobile = event.target.innerWidth < 900;
   }
 
-  constructor(private route: ActivatedRoute, private catService: CatService, private router: Router, private contactUsService: ContactUsService) { }
+  constructor(private route: ActivatedRoute, private catService: CatService, private router: Router) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id'];
@@ -66,8 +65,4 @@ export class DetailsPopUpComponent implements OnInit {
     // this.photoAnimationState = flag ? 'right' : 'left';
   }
 
-  goToContactUs(): void {
-    this.router.navigate(['/catalog']);
-    this.contactUsService.openCloseService.next(true);
-  }
 }
