@@ -4,6 +4,8 @@ import { EventEmitter } from '@angular/core';
 import { ContactUsService } from '../shared/services/contact-us-pop-up.service';
 import { Email } from '../shared/models/email.model';
 import { EmailService } from '../shared/services/email-service.service';
+import { NgToastService } from 'ng-angular-popup';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-us-pop-up',
@@ -19,7 +21,8 @@ export class ContactUsPopUpComponent implements OnInit {
     this.isMobile = event.target.innerWidth < 900;
   }
 
-  constructor(private contactUsService: ContactUsService, private emailService: EmailService) { }
+  constructor(private contactUsService: ContactUsService, private emailService: EmailService,
+              private toastService: NgToastService) { }
 
   ngOnInit(): void {
     this.isMobile = window.innerWidth < 900;
@@ -29,8 +32,9 @@ export class ContactUsPopUpComponent implements OnInit {
     this.contactUsService.openCloseService.next(false);
   }
 
-  async onSubmit(data: Email) {
-    this.emailService.sendEmail(data);
-    console.log("From .ts file!");
+  async onSubmit(form: NgForm) {
+    this.emailService.sendEmail(form.value as Email);
+    this.toastService.success({detail: 'Success',summary: 'Email sent!', position: 'tr', duration: 5000});
+    form.reset();
   }
 }

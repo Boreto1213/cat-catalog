@@ -36,6 +36,9 @@ import { MatLegacyListModule as MatListModule } from '@angular/material/legacy-l
 import { NavBarMobileComponent } from './shared/components/nav-bar-mobile/nav-bar-mobile.component';
 import { CatService } from './shared/services/cat.service';
 
+import { NgToastModule } from 'ng-angular-popup';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,6 +68,8 @@ import { CatService } from './shared/services/cat.service';
     MatSidenavModule,
     MatListModule,
     BrowserAnimationsModule,
+    NgToastModule,
+    NgxSkeletonLoaderModule.forRoot(),
   ],
   providers: [ContactUsService, UserService, CatService],
   bootstrap: [AppComponent],

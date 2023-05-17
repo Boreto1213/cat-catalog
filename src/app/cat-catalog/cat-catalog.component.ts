@@ -10,6 +10,7 @@ import { CatService } from '../shared/services/cat.service';
 })
 export class CatCatalogComponent implements OnInit {
   cats: Cat[] = [];
+  skeletons: number[] = [1, 2, 3, 4, 5, 6]
 
   isLoading = true;
   showMoreClickedFlag = false;
@@ -19,14 +20,13 @@ export class CatCatalogComponent implements OnInit {
 
   ngOnInit(): void {
     this.catService.loadCats();
-    this.catService.getCats().subscribe(cats => {
+    this.catService.getCats().subscribe( cats => {
       this.cats = cats;
       this.isLoading = false;
     });
   }
 
   onSave(): void {
-    // this.catService.uploadCats();
     console.log(this.cats)
   }
 
