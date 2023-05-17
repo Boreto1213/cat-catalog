@@ -25,8 +25,15 @@ export class ContactUsComponent {
   }
 
   async onSubmit(form: NgForm) {
-    this.emailService.sendEmail(form.value as Email);
-    this.toastService.success({detail: 'Success',summary: 'Email sent!', position: 'tr', duration: 5000});
-    form.reset();
+    const email: Email = form.value;
+    if (email.content !== '' && email.email !== '' && email.subject !== '') {
+      this.emailService.sendEmail(email);
+      this.toastService.success({detail: 'Success',summary: 'Email sent!', position: 'tr', duration: 5000});
+      form.reset();
+    } else {
+      this.toastService.error({detail: 'Error',summary: 'All fields are mandatory!', position: 'tr', duration: 5000});
+    }
+    
+    
   }
 }

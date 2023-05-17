@@ -37,6 +37,7 @@ import { CatService } from './shared/services/cat.service';
 import { NgToastModule } from 'ng-angular-popup';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ReviewService } from './shared/services/review.service';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     NgToastModule,
     NgxSkeletonLoaderModule.forRoot(),
   ],
-  providers: [UserService, CatService],
+  providers: [UserService, CatService, ReviewService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
