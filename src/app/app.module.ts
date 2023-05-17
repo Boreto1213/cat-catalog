@@ -15,8 +15,8 @@ import { ReviewComponent } from './about-us/review/review.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatCardModule } from '@angular/material/card';
+import { MatLegacyFormFieldModule as MatFormFieldModule } from '@angular/material/legacy-form-field';
+import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { DetailsPopUpComponent } from './about-us/details-pop-up/details-pop-up.component';
@@ -32,9 +32,12 @@ import { AdminComponent } from './admin/admin.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
+import { MatLegacyListModule as MatListModule } from '@angular/material/legacy-list';
 import { NavBarMobileComponent } from './shared/components/nav-bar-mobile/nav-bar-mobile.component';
 import { CatService } from './shared/services/cat.service';
+
+import { NgToastModule } from 'ng-angular-popup';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   declarations: [
@@ -65,6 +68,8 @@ import { CatService } from './shared/services/cat.service';
     MatSidenavModule,
     MatListModule,
     BrowserAnimationsModule,
+    NgToastModule,
+    NgxSkeletonLoaderModule.forRoot(),
   ],
   providers: [ContactUsService, UserService, CatService],
   bootstrap: [AppComponent],

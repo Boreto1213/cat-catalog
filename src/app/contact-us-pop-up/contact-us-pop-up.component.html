@@ -22,7 +22,7 @@
       >
     </div>
 
-    <form style="padding: 20px" #emailForm="ngForm" (ngSubmit)="onSubmit(emailForm.value)">
+    <form style="padding: 20px" #emailForm="ngForm" (ngSubmit)="onSubmit(emailForm)">
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
             <input type="email" name="email" class="form-control" id="email" required placeholder="name@example.com" ngModel>
@@ -43,7 +43,7 @@
 
     <div class="message-container">
       <h5 class="message">
-        Feel free to ask any question. We are more than happy to answer them! :)
+        Feel free to ask any questions. We are more than happy to answer them! :)
       </h5>
     </div>
   </div>

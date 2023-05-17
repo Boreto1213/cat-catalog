@@ -1,7 +1,58 @@
 <div class="wrapper">
     <h1>Choose from our finest selection of <span>British Shorthairs</span>!</h1>
+
+
     <div class="catalog">
         <app-item-card [cat]="cat" *ngFor="let cat of cats"></app-item-card>
+
+        <div class="skeleton-card" *ngIf="isLoading">
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '220px' }"></ngx-skeleton-loader>
+
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+        </div>
+        <div class="skeleton-card" *ngIf="isLoading">
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '220px' }"></ngx-skeleton-loader>
+
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+        </div>
+        <div class="skeleton-card" *ngIf="isLoading">
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '220px' }"></ngx-skeleton-loader>
+
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+        </div>
+        <div class="skeleton-card" *ngIf="isLoading">
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '220px' }"></ngx-skeleton-loader>
+
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+        </div>
+        <div class="skeleton-card" *ngIf="isLoading">
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '220px' }"></ngx-skeleton-loader>
+
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+        </div>
+        <div class="skeleton-card" *ngIf="isLoading">
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '220px' }"></ngx-skeleton-loader>
+
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader appearance="" [theme]="{ width: '240px', height: '30px' }"></ngx-skeleton-loader>
+        </div>
     </div>
 </div>
 <router-outlet></router-outlet>
