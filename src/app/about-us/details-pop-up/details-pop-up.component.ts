@@ -59,10 +59,9 @@ export class DetailsPopUpComponent implements OnInit {
         this.photoIndx = this.cat.images.length -1;
       }
     }
-
-    // this.urls[0] = this.cat.img[this.photoIndx];
-
-    // this.photoAnimationState = flag ? 'right' : 'left';
   }
 
+  toContactUs(): void {
+    this.router.navigate(['/contact-us']);
+  }
 }
