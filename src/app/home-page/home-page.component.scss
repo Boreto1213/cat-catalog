@@ -98,6 +98,16 @@ body {
             
         }
 
+        .mid {
+          display: flex;
+          flex-direction: column-reverse;
+          
+          h5 {
+            width: 230px;
+            font-size: 14px;
+          }
+        }
+
         .right-content {
             margin-right: 80px;
             
