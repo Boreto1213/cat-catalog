@@ -15,7 +15,7 @@ export enum ReviewFilter {
   providedIn: 'root'
 })
 export class ReviewService {
-  private url = 'http://localhost:5000/reviews';
+  private url = 'https://british-shorthair-illinois.herokuapp.com/reviews';
   private reviewsSubject = new Subject<Review[]>()
 
   constructor(private http: HttpClient) { }

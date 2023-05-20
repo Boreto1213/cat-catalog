@@ -5,8 +5,6 @@
     display: flex;
     justify-content: center;
 
-    // overflow: hidden;
-
     top: 0;
     bottom: 0;
     left: 0;
@@ -45,7 +43,7 @@
         }
 
         .image {
-            width: 50%;
+            width: 70%;
             height: 80%;
             // margin: 20px;
 
@@ -55,7 +53,7 @@
         }
 
         .information {
-            font-size: 22px;
+            font-size: 18px;
 
             li {
                 margin: 10px;
@@ -63,7 +61,8 @@
 
             .buttons {
                 display: flex;
-                justify-content: center;                
+                justify-content: center; 
+                margin-top: 20px;               
 
                 button {
                     margin: 6px;
@@ -144,9 +143,8 @@ body.pop-up-modal-open {
         }
     
         .image {
-            width: 50%;
+            width: 90%;
             height: 80%;
-            // margin: 20px;
     
             background-repeat: no-repeat;
             background-size: contain;
@@ -167,8 +165,6 @@ body.pop-up-modal-open {
                 padding: 0 20px;
             }
         }
-
-        
 
         .buttons {
             display: flex;

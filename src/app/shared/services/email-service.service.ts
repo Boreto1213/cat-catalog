@@ -7,9 +7,9 @@ import { catchError, tap, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class EmailService {
-private url = "http://localhost:5000";
+private url = "https://british-shorthair-illinois.herokuapp.com";
 private fromEmail = "bodam02@abv.bg";
-private toEmail = "borisvd4@gmail.com"
+private toEmail = "gyokovg@gmail.com";
 
 // Inject the HttpClient service in the constructor
 constructor(private http: HttpClient) {}
