@@ -7,7 +7,7 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class CatService {
-  url: string = 'http://localhost:5000/cats';
+  url: string = 'https://british-shorthair-illinois.herokuapp.com/cats';
   cats: Cat[] = [];
   private catsSubject = new Subject<Cat[]>();
 

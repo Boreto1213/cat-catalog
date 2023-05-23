@@ -11,13 +11,19 @@
 
         <div class="information">
             <ul>
-                <li><span>Name: </span> {{ cat.name }}</li>
-                <li><span>Age: </span> {{ cat.age }}</li>
-                <li><span>Breed: </span> {{ cat.breed }}</li>
-                <li><span>Color: </span> {{ cat.color }}</li>
-                <li><span>Sex: </span> {{ cat.sex }}</li>
-                <li><span>Price: </span> {{ cat.price }}</li>
-                <li><span>Fully vaccinated and dewarmed: </span> Yes </li>
+                <li><span class="dark-gray">Name: </span> <span>{{ cat.name }}</span></li>
+                <hr>
+                <li><span class="dark-gray">Born: </span> <span>{{ cat.born }}</span></li>
+                <hr>
+                <li><span class="dark-gray">Breed: </span> <span>{{ cat.breed }}</span></li>
+                <hr>
+                <li><span class="dark-gray">Color: </span> <span>{{ cat.color }}</span></li>
+                <hr>
+                <li><span class="dark-gray">Sex: </span> <span>{{ cat.sex }}</span></li>
+                <hr>
+                <li><span class="dark-gray">Price: </span> <span>{{ cat.price }}$</span></li>
+                <hr>
+                <li><span class="dark-gray">Fully vaccinated and dewarmed:</span> <span style="line-height: 79px;">Yes</span></li>
             </ul>
 
             <div class="buttons">
@@ -45,10 +51,15 @@
     <div class="information">
         <ul>
             <li><span>Name: </span> <span>{{ cat.name }}</span></li>
-            <li><span>Age: </span> <span>{{ cat.age }}</span></li>
+            <hr>
+            <li><span>Born: </span> {{ cat.born }}</li>
+            <hr>
             <li><span>Breed: </span> <span>{{ cat.breed }}</span></li>
+            <hr>
             <li><span>Color: </span> <span>{{ cat.color }}</span></li>
+            <hr>
             <li><span>Sex: </span> <span>{{ cat.sex }}</span></li>
+            <hr>
             <li><span>Price: </span> <span>{{ cat.sex }}</span></li>
         </ul>
 

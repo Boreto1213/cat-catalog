@@ -5,8 +5,6 @@
     display: flex;
     justify-content: center;
 
-    // overflow: hidden;
-
     top: 0;
     bottom: 0;
     left: 0;
@@ -45,7 +43,7 @@
         }
 
         .image {
-            width: 50%;
+            width: 70%;
             height: 80%;
             // margin: 20px;
 
@@ -55,15 +53,34 @@
         }
 
         .information {
-            font-size: 22px;
+            font-size: 18px;
 
-            li {
-                margin: 10px;
+            ul {
+                padding: 0;
+                list-style: none;
+                padding-right: 20px;
+                width: 250px;
+
+                hr {
+                    margin: 5px 0;
+                }
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .dark-gray {
+                        color: rgb(120, 120, 120);
+                    }
+                }
             }
+
+            
 
             .buttons {
                 display: flex;
-                justify-content: center;                
+                justify-content: center; 
+                margin-top: 20px;               
 
                 button {
                     margin: 6px;
@@ -79,7 +96,7 @@
                     width: 140px;
                     color: #101820FF;
                     background-color: #F2AA4CFF;
-                    transition: all 0.9 ease-in-out;
+                    transition: ease-in-out 0.5s;
 
                     &:hover {
                         transform: scale(1.1);
@@ -144,9 +161,8 @@ body.pop-up-modal-open {
         }
     
         .image {
-            width: 50%;
+            width: 90%;
             height: 80%;
-            // margin: 20px;
     
             background-repeat: no-repeat;
             background-size: contain;
@@ -160,6 +176,10 @@ body.pop-up-modal-open {
         ul {
             padding: 0;
 
+            hr {
+                margin: 10px 0;
+            }
+
             li {
                 display: flex;
                 justify-content: space-between;
@@ -167,8 +187,6 @@ body.pop-up-modal-open {
                 padding: 0 20px;
             }
         }
-
-        
 
         .buttons {
             display: flex;

@@ -81,17 +81,25 @@ ul {
     }
 }
 
+.btn-email {
+    transition: ease-in-out 0.5s;
+
+    &:hover {
+        background-color: #fff;
+        color: black;
+        transform: scale(1.1);
+    }
+
+    &:active {
+        background-color: #c3c3c3;
+    }
+}
+
 .mobile-container {
-    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 80px;
-
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    padding-top: 60px;
 
     background-color: white;
 }
@@ -119,5 +127,6 @@ ul {
     .message {
         text-align: center;
         font-size: 14px;
+        padding: 10px 20px;
     }
   }

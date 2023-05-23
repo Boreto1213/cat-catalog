@@ -30,4 +30,22 @@ export class CatCatalogComponent implements OnInit {
     console.log(this.cats)
   }
 
+  addCat(): void {
+    const newCat: Cat = {
+      name: 'Lola',
+      breed: 'British Shorthair',
+      color: 'Lilac',
+      sex: 'Male',
+      born: '3 April 2023',
+      images: [
+        '../../assets/cat-images/6/lola-1.jpg',
+        '../../assets/cat-images/6/lola-2.jpg',
+        '../../assets/cat-images/6/lola-3.jpg',
+        '../../assets/cat-images/6/lola-4.jpg',
+      ],
+      price: 1200
+    };
+
+    this.catService.uploadCat(newCat);
+  }
 }
