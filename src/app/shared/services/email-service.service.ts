@@ -18,34 +18,9 @@ constructor(private http: HttpClient) {}
 sendEmail(emailData: Email) {
 const data = {...emailData, apiKey: this.sendEmail, toEmail: this.toEmail, fromEmail: this.fromEmail}
 
-  // Set up the email message
-  // const email = {
-  //   personalizations: [
-  //     {
-  //       to: [
-  //         {
-  //           email: emailData.email
-  //         }
-  //       ],
-  //       subject: emailData.subject
-  //     }
-  //   ],
-  //   from: {
-  //     email: this.toEmail
-  //   },
-  //   content: [
-  //     {
-  //       type: 'text/plain',
-  //       value: emailData.content
-  //     }
-  //   ]
-  // };
-
   // Set up the HTTP headers with the API key
   const headers = new HttpHeaders({
     'Content-Type': 'application/json'
-    // Authorization: `Bearer ${this.SENDGRID_API_KEY}`,
-    // 'Access-Control-Allow-Origin': '*'
   });
   console.log(data);
   // Make a POST request to the SendGrid API to send the email

@@ -55,9 +55,27 @@
         .information {
             font-size: 18px;
 
-            li {
-                margin: 10px;
+            ul {
+                padding: 0;
+                list-style: none;
+                padding-right: 20px;
+                width: 250px;
+
+                hr {
+                    margin: 5px 0;
+                }
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .dark-gray {
+                        color: rgb(120, 120, 120);
+                    }
+                }
             }
+
+            
 
             .buttons {
                 display: flex;
@@ -78,7 +96,7 @@
                     width: 140px;
                     color: #101820FF;
                     background-color: #F2AA4CFF;
-                    transition: all 0.9 ease-in-out;
+                    transition: ease-in-out 0.5s;
 
                     &:hover {
                         transform: scale(1.1);
@@ -157,6 +175,10 @@ body.pop-up-modal-open {
 
         ul {
             padding: 0;
+
+            hr {
+                margin: 10px 0;
+            }
 
             li {
                 display: flex;

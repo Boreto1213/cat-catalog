@@ -1,5 +1,5 @@
-<div class="wrapper">
-  <div class="pop-up-body" *ngIf="!isMobile">
+<div class="wrapper" *ngIf="!isMobile">
+  <div class="pop-up-body" >
     <div class="header">
       <h1>Send us an email</h1>
     </div>
@@ -20,7 +20,7 @@
         </div>
 
         <div style="display:flex; justify-content: center">
-            <button type="submit" class="btn btn-dark">Send Email</button>
+            <button type="submit" class="btn btn-dark btn-email">Send Email</button>
         </div>
     </form>
 
@@ -69,7 +69,7 @@
         </div>
   
         <div style="display:flex; justify-content: center">
-            <button type="submit" class="btn btn-dark">Send</button>
+            <button type="submit" class="btn btn-dark btn-email">Send Email</button>
         </div>
     </form>
   
