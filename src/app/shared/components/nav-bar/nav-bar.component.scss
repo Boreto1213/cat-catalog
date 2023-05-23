@@ -96,7 +96,7 @@ header {
             line-height: 50px;
             color: #101820FF;
             transition: ease-in-out 0.5s;
-            
+            border: none;
 
             a {
                 color: #101820FF;
@@ -111,85 +111,6 @@ header {
                 background-color: rgb(192, 124, 36);
             }
         }
-          
-          /* Slide in */
-        //   li:nth-child(2) a {
-        //     overflow: hidden;
-        //   }
-          
-        //   li:nth-child(2) a::after {
-        //     opacity: 1;
-        //     transform: translate3d(-100%, 0, 0);
-        //   }
-          
-        //   li:nth-child(2) a:hover::after,
-        //   li:nth-child(2) a:focus::after{
-        //     transform: translate3d(0, 0, 0);
-        //   }
-          
-          /* Scale from center */
-        //   li:nth-child(3) a::after {
-        //     opacity: 1;
-        //     transform: scale(0);
-        //     transform-origin: center;
-        //   }
-          
-        //   li:nth-child(3) a:hover::after,
-        //   li:nth-child(3) a:focus::after{
-        //     transform: scale(1);
-        //   }
-        
-        // li {
-        //     display: inline-block;
-        //     height: 50px;
-        //     margin-left: 10px;
-        //     line-height: 50px;
-        //     transition: all 0.3s ease 0s;
-        //     cursor: pointer;
-
-        //     a {
-        //         display: block;
-        //         padding: 0 20px;
-        //         text-decoration: none;
-        //         color: #F2AA4CFF;
-
-        //     }
-
-        //     &.links:hover {
-        //         background-color: #F2AA4CFF;
-        //         transform: scale(1.1);
-
-        //         a {
-        //             // color: #101820FF;
-        //             color: #eee;
-        //         }
-        //     }
-
-        //     &.links:active {
-        //         background-color: rgb(192, 124, 36);
-
-        //     }
-
-            // &.contact-us {
-            //     border-radius: 30px;
-            //     background-color:#F2AA4CFF;
-            //     text-align: center;
-            //     width: 130px;
-
-            //     a {
-            //         color: #101820FF;
-            //     }
-
-            //     // &:hover {
-            //     //     background-color: rgb(157, 85, 224);
-            //     // }
-
-            //     &:active {
-            //         background-color: rgb(192, 124, 36);
-            //     }
-            // }
-
-        // }
     }
     
 }
