@@ -79,8 +79,8 @@
 
             .buttons {
                 display: flex;
-                justify-content: center; 
-                margin-top: 20px;               
+                margin-top: 20px;      
+                padding-right: 20px;         
 
                 button {
                     margin: 6px;
@@ -93,13 +93,17 @@
                 }
 
                 .contact-us {
-                    width: 140px;
-                    color: #101820FF;
-                    background-color: #F2AA4CFF;
+                    width: 100%;
+                    height: 50px;
+                    line-height: 36px;
+                    color: #101820;
+                    background-color: #f2aa4c;
                     transition: ease-in-out 0.5s;
+                    border: none;
 
                     &:hover {
                         transform: scale(1.1);
+                        color: white
                     }
 
                     &:active {
@@ -152,7 +156,7 @@ body.pop-up-modal-open {
 
     .images {
         display: flex;
-        height: 40vh;
+        height: 330px;
         justify-content: center;
         align-items: center;
 
@@ -162,7 +166,7 @@ body.pop-up-modal-open {
     
         .image {
             width: 90%;
-            height: 80%;
+            height: 100%;
     
             background-repeat: no-repeat;
             background-size: contain;
@@ -190,7 +194,8 @@ body.pop-up-modal-open {
 
         .buttons {
             display: flex;
-            justify-content: center;                
+            justify-content: center;     
+            padding: 20px 0;           
 
             button {
                 margin: 6px;
@@ -203,10 +208,13 @@ body.pop-up-modal-open {
             }
 
             .contact-us {
-                width: 140px;
-                color: #101820FF;
-                background-color: #F2AA4CFF;
-                transition: all 0.9 ease-in-out;
+                width: 70%;
+                height: 50px;
+                line-height: 36px;
+                color: #101820;
+                font-size: 18px;
+                font-weight: 600;
+                background-color: #f2aa4c;
 
                 &:active {
                     background-color: rgb(190, 137, 68);
